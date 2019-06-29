@@ -1,0 +1,15 @@
+Basics:
+
+(1) Types:
+	- Integer types: 
+		- int, unsigned int, char
+	- Floating point types:
+		- double
+	- Boolean types:
+		- true, false
+
+(2) Pointers
+
+(3) Arrays
+
+(4) Class/Struct types
