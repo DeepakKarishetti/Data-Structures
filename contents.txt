@@ -1,5 +1,14 @@
 CONTENTS:
 
+
  - Knowing basic data structures.
+
  - Understand and use most of C++ features.
+	- Pointers and dynamic memory management.
+	- Templates.
+	- Inheritance.
+
  - Performance of algorithms.
+	- Measure performance.
+	- Analyze performance of algorithm.
+	- Performance of algorithms and data structure operations. 
