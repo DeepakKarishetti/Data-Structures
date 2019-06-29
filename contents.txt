@@ -1,0 +1,5 @@
+CONTENTS:
+
+ - Knowing basic data structures.
+ - Understand and use most of C++ features.
+ - Performance of algorithms.
