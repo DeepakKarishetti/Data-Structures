@@ -5,13 +5,33 @@ using namespace std;
 
 void print_it()
 {
-	cout << "Maggie!" << "\n";
+	cout << "Maggie!" << "\n\n" << "Enter a word to count the word length:" << "\n";
 }
 
 int str_length(string word)
 {
 	cout << word.length() << "\n";
 }	
+
+// recursive function
+void print_n_times(string s, int n)
+{
+	if (n == 0) return; // base case: VERY IMPORTANT
+	cout << s << "\n";
+	print_n_times(s, n-1); // recursively calling the function
+}
+
+// passing parameter by value
+void set_to_zero(int x)
+{
+	x = 0;
+}
+
+// passing parameter by reference
+void set_to_zero_ref(int &x)
+{
+	x = 0;
+}
 
 int main()
 {
@@ -34,7 +54,7 @@ int main()
 	int j = 3;
 	while (j > 0)
 	{
-		cout << "Hello!" << "\n";
+		cout << "Hello!" << "\n\n";
 		j--;
 	}
 
@@ -55,7 +75,8 @@ int main()
 	{
 		cout << "Invalid input" << "\n";
 	}
-	
+	cout << "\n";
+
 	// arrays
 	array<int, 3> numbers;
 
@@ -75,6 +96,20 @@ int main()
 	print_it();	
 	cin >> enter;	
 	str_length(enter);
+	cout << "\n";
+
+	// calling the print_n_times function
+	print_n_times("What's up?", 5);
+
+	// pass by value
+	int y = 42;
+	set_to_zero(y);
+	cout << "\n" << y << "\n";
 	
+	// pass by reference
+	int q = 42;
+	set_to_zero_ref(q);
+	cout << "\n" << q << "\n";
+
 	return 0;
 }
