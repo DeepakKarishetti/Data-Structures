@@ -11,4 +11,17 @@ CONTENTS:
  - Performance of algorithms.
 	- Measure performance.
 	- Analyze performance of algorithm.
-	- Performance of algorithms and data structure operations. 
+	- Performance of algorithms and data structure operations.
+
+Data structures:
+
+ - Linked list
+	 - It is a linear data structure like arrays but not stored at contiguous locations.
+	 - The elements in a linked list are linked using pointers. 
+	 - Linked list structure consists of node objects and each node consists of one data value. Each node contains a pointer to the next node, and nodes can be independently created or destroyed.
+
+	 - Applications:
+		 - Low level data structure for implementing - stacks and queues.
+		 - Linear contained for use when lots of cutting/splicing operations are important
+		 - Keeping track of undo chains
+		 - Other data structures - hashtables and graphs
