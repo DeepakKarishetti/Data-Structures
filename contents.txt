@@ -15,7 +15,9 @@ CONTENTS:
 
 Data structures:
 
- - Linked list
+
+ -> Linked list
+
 	 - It is a linear data structure like arrays but not stored at contiguous locations.
 	 - The elements in a linked list are linked using pointers. 
 	 - Linked list structure consists of node objects and each node consists of one data value. Each node contains a pointer to the next node, and nodes can be independently created or destroyed.
@@ -25,3 +27,31 @@ Data structures:
 		 - Linear contained for use when lots of cutting/splicing operations are important
 		 - Keeping track of undo chains
 		 - Other data structures - hashtables and graphs
+
+
+ -> Stacks and queues
+
+	 - Only permits operations at the ends.
+	 - Easily implemented with linked lists.
+	 - Lots of applications despite its simplicity.
+
+	 -> Stacks (LIFO): #include <stack>
+
+		 -  Three operations: top (look the top element), push (add element to the top of stack) and pop (remove top item from the stack), size(), empty().
+
+		 - Applications: 
+			 - Syntax analysis (Nested structures)
+			 - Searching branching structures (trees and mazes)
+			 - Programming languages or processors
+
+	
+	 -> Queues (FIFO): #include <queue>
+	
+		 - Adding an item to a queue: enqueue and removing an item from a queue: de-queue.
+		 - Operations: push(), pop(), front(), back(), size(), empty().
+
+		 - Applications:
+			 - Anything to keep thiings in order by the time of arrival.
+			 - Buffering character input 
+			 - I/O request scheduling
+			 - Event handling (GUI, simulations, etc.)

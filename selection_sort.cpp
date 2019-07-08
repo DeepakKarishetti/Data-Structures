@@ -22,6 +22,10 @@ Illustration:
  1 | 7 | 2 | 10 | 3 | 5 | 6
      |____________________|
    Sort the remaining elements
+
+Other sorting algorithms:
+ - Insertion sort, quick sort, merge sort, heap sort, radix sort(LSD, MSD), into sort, adaptive merge sort, shell sort, bubble sort, cocktail shaker sort, gnome sort, bitonic sort, bogo sort. 
+
 */
 
 
