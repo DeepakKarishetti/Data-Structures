@@ -13,7 +13,10 @@ CONTENTS:
 	- Analyze performance of algorithm.
 	- Performance of algorithms and data structure operations.
 
+
+
 Data structures:
+
 
 
  -> Linked list
@@ -29,11 +32,13 @@ Data structures:
 		 - Other data structures - hashtables and graphs
 
 
+
  -> Stacks and queues
 
 	 - Only permits operations at the ends.
 	 - Easily implemented with linked lists.
 	 - Lots of applications despite its simplicity.
+
 
 	 -> Stacks (LIFO): #include <stack>
 
@@ -55,3 +60,14 @@ Data structures:
 			 - Buffering character input 
 			 - I/O request scheduling
 			 - Event handling (GUI, simulations, etc.)
+
+
+
+ -> Graphs
+	
+	 - It is a type of data structure that consists of a finite sets of vertices called as nodes and a finite set of ordered pairs called as edge which contain weight/value/cost.
+	 - Graphs are used to represent many real-life applications. They are extensively used to represent networks.
+
+	 - Two key algorithms used in graph search are:
+		 - Depth-first search -> using recursion or stacks
+		 - Breadth-first search -> easy with using queues
