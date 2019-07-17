@@ -71,3 +71,13 @@ Data structures:
 	 - Two key algorithms used in graph search are:
 		 - Depth-first search -> using recursion or stacks
 		 - Breadth-first search -> easy with using queues
+
+
+
+
+Analysis of recursive algorithms:
+	 - Binary search
+	 - Merge sort
+
+
+
