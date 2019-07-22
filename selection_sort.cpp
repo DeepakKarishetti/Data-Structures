@@ -31,16 +31,20 @@ Other sorting algorithms:
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using std::cout;
 using std::vector;
+using std::swap;
 
+/* This function is present in algorithm by default
 void swap(int &a, int &b)
 {
 	int tmp = a;
 	a = b;
 	b = tmp;
 }
+*/
 
 void print_it(vector<int> vec)
 {
@@ -67,7 +71,7 @@ void selection_sort(vector<int> &vec)
 
 int main()
 {
-	vector<int> vec_1 = {5, 7, 2, 10, 3, 1, 6};
+	vector<int> vec_1 = {10, 12, 19, 2, 1, 5, 7, 2, 10, 3, 1, 6};
 	selection_sort(vec_1);
 	print_it(vec_1);
 

@@ -73,11 +73,51 @@ Data structures:
 		 - Breadth-first search -> easy with using queues
 
 
+ -> Recursion:
+		
+	 - Call a funtion from within a function as long as the base case is not satisfied.
+	 - Having a base case is the most important part of recursion.
+	 - Simple and is better than iteration if not for some storage and immediate results.
+
+	 - Recursive decomposition:
+		 - Reducing a problems into smaller sub problems and solving them ass as original problems.
+
+	 - Recursion as induction:
+		 - Basic form of recursion follows that of induction.
+		 - If we solve for a problem of size n, then we can do the same with a problem of size n+1
+
+ - Example: The Towers of Hanoi -> Uses both decomposition and induction.
+ 	    The maze problem
+	    Minimax 
+
+ - Divide and Conquer:
+	 - Split the problem into multiple smaller problems
+	 - Solve the sub problems recursively
+	 - Recombine the solution afterwards
+	 - Used only if splitting/recombination can be performed efficiently
 
 
-Analysis of recursive algorithms:
+
+Analysis of recursive algorithms
 	 - Binary search
 	 - Merge sort
+
+
+ -> Binary search:
+	
+	 - Complexity before we get to length 1 = O(log n)
+	 - Search for a value in a sorted list
+			 - Start at the element present at the index number half of the total list size.
+			 - If the element is less than the one looking for then go to the left half of the values or else to the right and search similarly at the half the size length of the list size element.
+			 - This is recursively done until the element is found.
+
+ -> Merge Sort:
+
+	 - Height of the tree = log n and the time complexity = O(n*log n)
+	 - Divide and conquer algorithm
+	 - Split the input list into half
+	 - Sort the halves recursively
+	 - Merge the sorted lists
 
 
 
