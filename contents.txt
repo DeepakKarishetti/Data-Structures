@@ -121,3 +121,66 @@ Analysis of recursive algorithms
 
 
 
+ -> SETS
+
+	 - #include <set>
+
+	 - Its an abstract data type for holding unique elemets, just another container for objects with no repetitions.
+
+	 - Applications:
+		 - Dictionary, compilers,spam filters, etc.
+
+	Types:
+		 - Ordered sets: 
+			 - Items must be comparable and sorted
+			 - Implemented using binary search trees
+
+		 - Unordered sets:
+			 - Typically faster than the ordered sets.
+			 - Items are not sorted and in no particular order
+			 - Implemented using hashtables
+
+
+
+ -> MAPS
+
+	 - #include <map>
+
+	 - aka Dictionary or associative array
+	 - Its an abstract data type for associating keys and values
+	 - Keys can be unique while the values can be anything
+	 - Built on sets having sets of key value pairs or associations
+	 - Each key maps to one and only one value, whereas, values can be mapped to multiple keys
+	 - Partial because we do not map all the possible keys
+
+	 - Simliar to sets, maps are of types:
+			
+			 - Ordered maps
+			 - Unordered maps
+
+
+
+ -> HASHTABLE
+
+	 - Date structure that allows very fast retrieval of data
+	 - Used to index large amounts of data and is done using a hash function
+	 - Address of each key is calculated using the key itself
+	 - Collisions are resolved with open or closed addressing
+	 - Open addressing involves linear search while the closed addressing involves using linked lists (called as chaining) containing data for a particular key having an index value
+	 - Applications: 
+		 - database indexing, compilers, caching, password authentication and more
+
+	Basic idea:
+		 - Create an array, vector or a similar container of some size
+		 - For each key you want to store:
+			 - Convert key to an integer (hash code)
+			 - Index equals hash code mod the array size
+			 - Store the key at the resulting index in array
+		
+		 - Most importantly avoid collisions
+
+	 - A good hash function:
+		 - Fast to compute
+		 - Uses the entire object
+		 - Seperates similar objects widely
+		 - Random like
