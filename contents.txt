@@ -162,6 +162,8 @@ Analysis of recursive algorithms
 
  -> HASHTABLE
 
+	 - C++11 and later = unordered_set and unordered_map
+	
 	 - Date structure that allows very fast retrieval of data
 	 - Used to index large amounts of data and is done using a hash function
 	 - Address of each key is calculated using the key itself
@@ -184,3 +186,6 @@ Analysis of recursive algorithms
 		 - Uses the entire object
 		 - Seperates similar objects widely
 		 - Random like
+
+
+
