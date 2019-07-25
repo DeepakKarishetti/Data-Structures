@@ -188,4 +188,98 @@ Analysis of recursive algorithms
 		 - Random like
 
 
+ - Dynamic array allocation:
+	
+	 - STACK : local variables, function arguments, return values. 'Grows down'.
+		- holds 'stack frames' also known as 'activation records'
+		- each function call results in a new stack frame
+		- each stack frame contains memory for: 
+			- local variable declared in the function
+			- function parameters
+			- return address for the function
+		- when a function is called all of this memory is returned to the stack automatically
+
+
+	 - HEAP : dynamically allocated memory (using new). 'Grows up'.
+		- gets pieces of 'allocate memory' using new
+		- pieces stay allocated until explicitly released by use of delete
+		- heap memory has a lifetime independent of scope unlike the usual localvariables
+
+
+	 - DATA SEGMENT : global and static variables, constants.
+		- only ever one instance of them
+		- get stored in their own special area
+		- memory is pre-allocated and fixed in size
+
+
+	 - TEXT SEGMENT : program code, read only
+
+
+
+
+	-> Dynamic arrays are allocated using the 'new' keyword
+		double *darray = new double[1024];
+
+	->  Use the array pointer just like a regular array
+		for (int i = 0; i < 1024; i++)
+			darray[i] = 0.0;
+	->  Deallocate arrays - Always clean up when you are done
+		- delete[] darray;
+
+
+ - Dynamic object allocation:
+
+	 - Creating new class objects : STACK
+		 - class_name var_name;
+		
+		 - Accessing the class objects created:
+			 - var_name.parameter = value;
+	
+
+	 - Creating new class objects : HEAP
+		
+		 - (class_name*) var_name = new class_name/constructor;
+	
+		 - deleting the class objects created dynamically:
+			 - delete var_name;
+		 - Accessing the class objects created:
+			 - (*var_name).parameter = value;
+			OR
+			 - var_name -> parameter = value;
+
+	 - Destructor:
+
+		 - the counterpart to constructor 
+		 - name is ~ followed by the class name = ~class_name();
+		 - never takes a parameter
+	
+		- A destructor is auton=matically called when:
+			- A local (stack allocated) object goes out of scope
+			- Delete is called on a dynamically allocated object
+
+ - DONT'S in Dynamic memory:
+
+	 - Never dereference a pointer which has not been set to a valid memory (using new or &)
+	 - Never dereference a pointer to memory which has already been deallocated (a dangling pointer)
+	 - Never change or lose a pointer which is pointing to dynamically allocated memory - or we won't be able to deallocate - causing a memory leak
+	 - Never use delete on a pointer which isn't pointing to a dynamically allocated memory (dangling or a NULL pointer)
+
+
+
+ -> ARRAY LIST:
+
+	 - List data structure built on arrays having many array list operations like add, get, set, etc.
+	 - We will be using dynamically allocted arrays
+	 - Array size is the capacity and not the size of the array
+	 - Encapsulating array list:	
+		 - we need to keep array, size and capacity all together
+		 - and maintain a consistent state
+
+	 - Expanding the capacity of an array list:
+		 - Double our capacity variable
+		 - create a new array using the new capacity
+		 - copy everything from the old array to the new array
+		 - delete the old array
+		 - update the array pointer to point to the new array
+
 
