@@ -315,8 +315,14 @@ Analysis of recursive algorithms
  -> The big 3 : RULE OF THREE IN C++
 
 	 - This rule basically states that if a class defines one(or more) of the following, it should probably explicitly define all the three, which are:
-		 - Destructor
-		 - Copy constructor
-		 - Copy assignment operator
+		 - Destructor : called when the object goes out of scope
+				
+		 - Copy constructor : creates copies of the objects
+				 - when passing by value
+				 - when used in variable initializer
+
+		 - Copy assignment operator : copies object over existing object in assignment
 	 	
+
+
 
