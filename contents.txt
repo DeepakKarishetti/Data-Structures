@@ -283,3 +283,40 @@ Analysis of recursive algorithms
 		 - update the array pointer to point to the new array
 
 
+
+ -> OPERATOR OVERLOADING:
+
+	 - A cpp feature that allows the programmer to redefine the meaning of an operator (when operating on class objects) is known as operator overloading.
+	 - To overload an operator, a special operator function is defined inside the class that contains the following:
+		
+		 class classname
+		 {
+			...... ... ....
+			public:
+				return_type operator symbol (arguments)
+				{
+					... .. ...
+				}
+			... .. ...
+		 };
+
+		- return_type is the return type of the function
+		- return_type of the function is followed by the operator keyword
+	  	- symbol is the operator symbol you want to overload, like +,>,-,++
+		- you can pass arguments to the operator function in similar way as functions
+
+
+		- Cannot be used for built-in types like int, float, char, etc.
+	  	- '=' and '&' are always overloaded in c++
+		- The 4 operators that cannot be overloaded are: '::' (scope resolution), '.' (member selection), '.*' (member selection through pointer to function) and '?:' (ternary operator)
+
+
+
+ -> The big 3 : RULE OF THREE IN C++
+
+	 - This rule basically states that if a class defines one(or more) of the following, it should probably explicitly define all the three, which are:
+		 - Destructor
+		 - Copy constructor
+		 - Copy assignment operator
+	 	
+
