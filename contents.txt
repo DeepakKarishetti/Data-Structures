@@ -325,4 +325,24 @@ Analysis of recursive algorithms
 	 	
 
 
+ -> GENERIC PROGRAMMING:
 
+	- It is a style of computer programming in which algorithms are written in terms of types to-be-specified-later that are then instantiated when needed for specific types provided as parameters.
+	- This kind of method is chosen to increase the code efficiency
+	- This enables the user to write a general algorithm which will work for all data types
+	- Advantages:
+		 - code resuability
+		 - avoid function overloading
+		 - once written can be used for multiple times and cases
+
+ - Generic programming can be implemented in C++ using TEMPLATES.
+
+
+
+ -> TEMPLATES:
+	
+	 - Simple and a powerful tool in C++. The simple idea is to pass thedata type as a parameter so that we don't need to write the same code for different data types.
+	- Everything must be #included
+
+	-> Function templates 
+	-> Class templates
