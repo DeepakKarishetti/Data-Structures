@@ -433,3 +433,50 @@ Analysis of recursive algorithms
 		 - Database indexing (B-trees)
 		 - Filesystem metadata indexing (B-trees or R-B)
 		
+
+
+ -> INHERITANCE:
+		
+	 - Inheritance in c++ takes place between classes. In an inheritance (is-a) relationship, the class being inherited from is called the parent class and the class doing the inheriting is called the child class, derived class or the subclass.
+	 - Anything defines in the superclass can be used by the child class
+	 - Behaviours can also be inherited, leading to a very powerful code reuse.
+
+	 - Classes can inherit from other classes:
+		- Properties (variables)
+		- Behaviour (methods)
+
+	 - Inheritance serves various functions:
+		- Modelling of class relationships
+	 	- Code reuse
+		- Subtyping/polymorphism
+
+	 - Inheritance : Override:
+		 - The behaviour defined in the super class can be changed in the sub class accordingly, but		
+		 - We CANNOT override the properties
+		 - We CANNOT change the return type of methods
+
+
+
+ -> Inheritence : POLYMORPHISM
+
+	 - The word polymorphism means having many forms.
+	 - Polymorphism occurs when there is a hirearchy of classes and they are related by inheritance.
+	 - C++ polymorphism means that a call to a member function will cause a different function to be executed depending on the type of the object that invokes the function.
+
+	 - Virtual function : its a function in a base class that is declared using the keyword 'virtual'. This defined in a base class with another version in a derived class, signals to the compiler that we do not want static linkage for this function. Using this we want to call the function at any given point in the program based on the kind of object for which it is called. This sort of operation is referred to as dynamic linkage or late binding.
+
+	 - Pure virtual function : In order to include a virtual function in a base class  so that it may be redefined in a derived class to suit the objects of that class, but do not have a good definition for the function, we simply write it as equivalent to 0 :
+			=> virtual typename function() = 0;
+	 - The =0 tells the compiler that the function has no body, and the above function will be called 'pure virtual function'.
+
+	 
+	 - Abstract classes : defines an abstract type which cannot be instantiated, but can be used as a base class
+
+	 - Pure virtual methods are not defined in the abstract class.
+	 - Children (non-abstract) of abstract classes must implement (override) any pure virtual methods.
+	 - But we can use pure virtual methods in abstract class.
+
+
+	 - Inheritance : Constructors
+		 - Usually a subclass calls the default constructor (i.e. no parameters) of the super class before executing its own constructor.
+		 - We can force the subclass to call a different constructor using this form in the definition.
