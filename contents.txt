@@ -346,3 +346,90 @@ Analysis of recursive algorithms
 
 	-> Function templates 
 	-> Class templates
+
+
+
+ -> BINARY TREES:
+
+	 - A tree is either empty or has a root node with one or more children, each of which is a tree.
+	
+	 - A binary tree is defined recursively.
+	 - In a binary tree, if we pack the maximum number of nodes into a binary tree of height k, which is called as a full tree, we will have:
+		1+2+4+....+2^k = 2^(k+1) - 1 nodes.
+
+	 - The minimum height of a bonary tree with n nodes is O(log n)
+
+	- Binary tree traversals : a traversal of a tree is the act of visiting every node in the tree once. There are three traversal orders:
+		 - Pre-order : visit the root first and then the left and right sub-trees recursively
+		 - In-order : visit the left sub-tree, the root, and then the right sub-tree
+ 		 - Post-order : visit the left and right sub-trees first and the root last
+	
+
+ -> BINARY SEARCH TREES:
+	
+	 - Data structures for holding comparable elements
+		- efficient searching, insertion and deletion
+		- underlying structure for sets, maps (BSTs)
+		- Also used in database indexing (B-trees)
+
+	 - Basic structure:
+		- Nodes hold unique data values and pointers to child nodes
+		- data acts as partitioning element in the tree
+		 - child nodes/trees to the left of the data element have value less than the data element
+		 - child nodes/trees to the right of have a value greater than the data element
+		 - the left and right subtree each must be a binary search tree
+
+	 - nodes contains strings
+	 - left child subtree contains values less than the root
+	 - root value is less than all child subtree values
+
+	 - Operations:
+		- Search : different order of traversal as binary trees
+		- Insert
+		- Delete (3 cases):
+			- No child:
+				- Find the item
+				- Detach and delete
+
+			- One child:
+				- Find the item
+				- Link child to parent
+				- delete
+
+			- Two children:
+				- Find the item
+				- Swap the rightmost item in left subtree
+				- Remove the rightmost node in the left subtree
+
+	 - AVL trees:
+		 - It is  self balancing Binary Search Tree where the difference between heights of the left and right subtrees cannot be more than one for all nodes.	
+		 - A recursive definition : left and right subtrees are height balanced
+
+
+	- Analysis:
+		 - Searching : number of recursive steps is <= height of the tree
+		 - A tree with N nodes : 
+			 - Best case = O(log N)
+			 - Worst case = O(N)
+	
+		 - When trees are balanced:
+			 - each subtree contains roughly half the nodes
+			 - each step down the tree roughly halves the problem
+
+	- Self balancing BST:
+		- trees become unbalanced through a series of inserts and deleted
+		- self balancing perform O(log N) or fewer operations to rebalance after insert and delete
+		- eg : Red-Black trees, AVL trees, Splay trees
+
+	
+	- ROTATIONS:
+		- Two basic operations are used to perform some re-balancing without violating the BST property : (keys(left) < key(root) < keys(right)) :
+			 - Left rotation 
+		 	 - Right rotation
+
+	 - BST Applications:
+		 - Linux kernel: schedulers, ext3 filesystem, virtual memory, many nore (Red-Black trees)
+		 - Ordered set and map types (c++ STL, Java) & Red-Black trees
+		 - Database indexing (B-trees)
+		 - Filesystem metadata indexing (B-trees or R-B)
+		
