@@ -480,3 +480,72 @@ Analysis of recursive algorithms
 	 - Inheritance : Constructors
 		 - Usually a subclass calls the default constructor (i.e. no parameters) of the super class before executing its own constructor.
 		 - We can force the subclass to call a different constructor using this form in the definition.
+
+
+
+ -> GRAPHS (cont):
+	 - Data structure comprised of nodes and edges
+
+	 - Graph traversal:
+		 - Breadth First Search (BFS):
+			 - Can be done using a queue
+		 - Depth First Search (DFS):
+			 - Can be done with a stack or recursion
+
+	 - Types:
+		 - Directed graphs 
+		 - Undirected graphs
+
+	 - Connectivity:
+		 - A graph is connected if there is a path between every pair of nodes
+		 - A graph is strongly connected if there is a path between every pair of nodes
+		 - A graph is weakly connected if you can make a path between every pair of nodes by removing the direction of the edge
+
+	 - Weighted and Unweighted graphs: graphs with additional data for every edge.
+
+	  - Graph representation:
+		 - Nodes with pointers to other nodes
+		 - Edges with start and end nodes
+		 - Adjacency matrix
+		 - Adjacency list
+
+	 - Adjacency matrix:
+		 - Searching through all the arrays can be expensive, so, a common approach is to use a matrix to hold all edges.
+		 -  Each column and row is for a node : n x n
+	
+	 - CAVEAT: 
+		 - Doesn't work with weighted graphs. Edges can have zero weight, so there's no difference between a zero weight and an edge that's not there.
+		 - On sparse graphs, a matrix can waste a lot of space with all the zeros. Using an array of linked lists is an alternative (Adjacency list).
+
+	 -> DFS Pseudocode (Recursive):
+		function DFS(Node node):
+			if node is visited, return
+			process node
+			set ndoe to visited
+			for neighbour in neighbours of node:
+				DFS(neighbour)
+		
+	 -> DFS Pseudocode (Stack-based):
+		function DFS(Node node):
+			s = stack
+			add node to s
+			while s is not empty:
+				node  = s.top() // also removes from s
+				if node is not visited:
+					process node
+					set node to visited
+					for neighbour in neighbours of node:
+						add neighbour to s
+
+
+	 -> BFS Pseudocode (Queue-based):
+		function BFS(Node node):
+			q = queue
+			add node to q
+			while q is not empty:
+				node = q.front() // also removes q
+				if node is not visited:
+					process node
+					set node to visited
+					for neighbour in neighbours of node:
+						add neighbour to q
