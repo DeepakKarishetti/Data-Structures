@@ -17,8 +17,6 @@ CONTENTS:
 
 Data structures:
 
-
-
  -> Linked list
 
 	 - It is a linear data structure like arrays but not stored at contiguous locations.
@@ -31,7 +29,6 @@ Data structures:
 		 - Linear contained for use when lots of cutting/splicing operations are important
 		 - Keeping track of undo chains
 		 - Other data structures - hashtables and graphs
-
 
 
  -> Stacks and queues
@@ -64,7 +61,6 @@ Data structures:
 			 - Event handling (GUI, simulations, etc.)
 
 
-
  -> Graphs
 	
 	 - It is a type of data structure that consists of a finite sets of vertices called as nodes and a finite set of
@@ -93,15 +89,15 @@ Data structures:
  	    The maze problem
 	    Minimax 
 
- - Divide and Conquer:
+
+ -> Divide and Conquer:
 	 - Split the problem into multiple smaller problems
 	 - Solve the sub problems recursively
 	 - Recombine the solution afterwards
 	 - Used only if splitting/recombination can be performed efficiently
 
 
-
-Analysis of recursive algorithms
+-Analysis of recursive algorithms
 	 - Binary search
 	 - Merge sort
 
@@ -115,6 +111,7 @@ Analysis of recursive algorithms
 			 the right and search similarly at the half the size length of the list size element.
 			 - This is recursively done until the element is found.
 
+
  -> Merge Sort:
 
 	 - Height of the tree = log n and the time complexity = O(n*log n)
@@ -122,7 +119,6 @@ Analysis of recursive algorithms
 	 - Split the input list into half
 	 - Sort the halves recursively
 	 - Merge the sorted lists
-
 
 
  -> SETS
@@ -145,7 +141,6 @@ Analysis of recursive algorithms
 			 - Implemented using hashtables
 
 
-
  -> MAPS
 
 	 - #include <map>
@@ -161,7 +156,6 @@ Analysis of recursive algorithms
 			
 			 - Ordered maps
 			 - Unordered maps
-
 
 
  -> HASHTABLE
@@ -220,8 +214,6 @@ Analysis of recursive algorithms
 	 - TEXT SEGMENT : program code, read only
 
 
-
-
 	-> Dynamic arrays are allocated using the 'new' keyword
 		double *darray = new double[1024];
 
@@ -271,7 +263,6 @@ Analysis of recursive algorithms
 	 - Never use delete on a pointer which isn't pointing to a dynamically allocated memory (dangling or a NULL pointer)
 
 
-
  -> ARRAY LIST:
 
 	 - List data structure built on arrays having many array list operations like add, get, set, etc.
@@ -319,8 +310,7 @@ Analysis of recursive algorithms
 		(member selection through pointer to function) and '?:' (ternary operator)
 
 
-
- -> The big 3 : RULE OF THREE IN C++
+ -> The Big 3 : RULE OF THREE IN C++
 
 	 - This rule basically states that if a class defines one(or more) of the following, it should probably explicitly
 	 define all the three, which are:
@@ -332,7 +322,6 @@ Analysis of recursive algorithms
 
 		 - Copy assignment operator : copies object over existing object in assignment
 	 	
-
 
  -> GENERIC PROGRAMMING:
 
@@ -346,7 +335,6 @@ Analysis of recursive algorithms
 		 - once written can be used for multiple times and cases
 
  - Generic programming can be implemented in C++ using TEMPLATES.
-
 
 
  -> TEMPLATES:
@@ -449,7 +437,6 @@ Analysis of recursive algorithms
 		 - Filesystem metadata indexing (B-trees or R-B)
 		
 
-
  -> INHERITANCE:
 		
 	 - Inheritance in c++ takes place between classes. In an inheritance (is-a) relationship, the class being inherited
@@ -471,7 +458,6 @@ Analysis of recursive algorithms
 		 - The behaviour defined in the super class can be changed in the sub class accordingly, but		
 		 - We CANNOT override the properties
 		 - We CANNOT change the return type of methods
-
 
 
  -> Inheritence : POLYMORPHISM
@@ -505,7 +491,6 @@ Analysis of recursive algorithms
 		 - Usually a subclass calls the default constructor (i.e. no parameters) of the super class before executing
 		 its own constructor.
 		 - We can force the subclass to call a different constructor using this form in the definition.
-
 
 
  -> GRAPHS (cont):
@@ -578,3 +563,6 @@ Analysis of recursive algorithms
 					set node to visited
 					for neighbour in neighbours of node:
 						add neighbour to q
+						
+						
+						
