@@ -23,7 +23,8 @@ Data structures:
 
 	 - It is a linear data structure like arrays but not stored at contiguous locations.
 	 - The elements in a linked list are linked using pointers. 
-	 - Linked list structure consists of node objects and each node consists of one data value. Each node contains a pointer to the next node, and nodes can be independently created or destroyed.
+	 - Linked list structure consists of node objects and each node consists of one data value. Each node contains a
+	 pointer to the next node, and nodes can be independently created or destroyed.
 
 	 - Applications:
 		 - Low level data structure for implementing - stacks and queues.
@@ -42,7 +43,8 @@ Data structures:
 
 	 -> Stacks (LIFO): #include <stack>
 
-		 -  Three operations: top (look the top element), push (add element to the top of stack) and pop (remove top item from the stack), size(), empty().
+		 -  Three operations: top (look the top element), push (add element to the top of stack) and pop (remove top
+		 item from the stack), size(), empty().
 
 		 - Applications: 
 			 - Syntax analysis (Nested structures)
@@ -65,7 +67,8 @@ Data structures:
 
  -> Graphs
 	
-	 - It is a type of data structure that consists of a finite sets of vertices called as nodes and a finite set of ordered pairs called as edge which contain weight/value/cost.
+	 - It is a type of data structure that consists of a finite sets of vertices called as nodes and a finite set of
+	 ordered pairs called as edge which contain weight/value/cost.
 	 - Graphs are used to represent many real-life applications. They are extensively used to represent networks.
 
 	 - Two key algorithms used in graph search are:
@@ -108,7 +111,8 @@ Analysis of recursive algorithms
 	 - Complexity before we get to length 1 = O(log n)
 	 - Search for a value in a sorted list
 			 - Start at the element present at the index number half of the total list size.
-			 - If the element is less than the one looking for then go to the left half of the values or else to the right and search similarly at the half the size length of the list size element.
+			 - If the element is less than the one looking for then go to the left half of the values or else to
+			 the right and search similarly at the half the size length of the list size element.
 			 - This is recursively done until the element is found.
 
  -> Merge Sort:
@@ -168,7 +172,8 @@ Analysis of recursive algorithms
 	 - Used to index large amounts of data and is done using a hash function
 	 - Address of each key is calculated using the key itself
 	 - Collisions are resolved with open or closed addressing
-	 - Open addressing involves linear search while the closed addressing involves using linked lists (called as chaining) containing data for a particular key having an index value
+	 - Open addressing involves linear search while the closed addressing involves using linked lists (called as
+	 chaining) containing data for a particular key having an index value
 	 - Applications: 
 		 - database indexing, compilers, caching, password authentication and more
 
@@ -261,7 +266,8 @@ Analysis of recursive algorithms
 
 	 - Never dereference a pointer which has not been set to a valid memory (using new or &)
 	 - Never dereference a pointer to memory which has already been deallocated (a dangling pointer)
-	 - Never change or lose a pointer which is pointing to dynamically allocated memory - or we won't be able to deallocate - causing a memory leak
+	 - Never change or lose a pointer which is pointing to dynamically allocated memory - or we won't be able to
+	 deallocate - causing a memory leak
 	 - Never use delete on a pointer which isn't pointing to a dynamically allocated memory (dangling or a NULL pointer)
 
 
@@ -286,7 +292,8 @@ Analysis of recursive algorithms
 
  -> OPERATOR OVERLOADING:
 
-	 - A cpp feature that allows the programmer to redefine the meaning of an operator (when operating on class objects) is known as operator overloading.
+	 - A cpp feature that allows the programmer to redefine the meaning of an operator (when operating on class objects)
+	 is known as operator overloading.
 	 - To overload an operator, a special operator function is defined inside the class that contains the following:
 		
 		 class classname
@@ -308,13 +315,15 @@ Analysis of recursive algorithms
 
 		- Cannot be used for built-in types like int, float, char, etc.
 	  	- '=' and '&' are always overloaded in c++
-		- The 4 operators that cannot be overloaded are: '::' (scope resolution), '.' (member selection), '.*' (member selection through pointer to function) and '?:' (ternary operator)
+		- The 4 operators that cannot be overloaded are: '::' (scope resolution), '.' (member selection), '.*'
+		(member selection through pointer to function) and '?:' (ternary operator)
 
 
 
  -> The big 3 : RULE OF THREE IN C++
 
-	 - This rule basically states that if a class defines one(or more) of the following, it should probably explicitly define all the three, which are:
+	 - This rule basically states that if a class defines one(or more) of the following, it should probably explicitly
+	 define all the three, which are:
 		 - Destructor : called when the object goes out of scope
 				
 		 - Copy constructor : creates copies of the objects
@@ -327,7 +336,8 @@ Analysis of recursive algorithms
 
  -> GENERIC PROGRAMMING:
 
-	- It is a style of computer programming in which algorithms are written in terms of types to-be-specified-later that are then instantiated when needed for specific types provided as parameters.
+	- It is a style of computer programming in which algorithms are written in terms of types to-be-specified-later that
+	are then instantiated when needed for specific types provided as parameters.
 	- This kind of method is chosen to increase the code efficiency
 	- This enables the user to write a general algorithm which will work for all data types
 	- Advantages:
@@ -341,7 +351,8 @@ Analysis of recursive algorithms
 
  -> TEMPLATES:
 	
-	 - Simple and a powerful tool in C++. The simple idea is to pass thedata type as a parameter so that we don't need to write the same code for different data types.
+	 - Simple and a powerful tool in C++. The simple idea is to pass thedata type as a parameter so that we don't need
+	 to write the same code for different data types.
 	- Everything must be #included
 
 	-> Function templates 
@@ -354,12 +365,14 @@ Analysis of recursive algorithms
 	 - A tree is either empty or has a root node with one or more children, each of which is a tree.
 	
 	 - A binary tree is defined recursively.
-	 - In a binary tree, if we pack the maximum number of nodes into a binary tree of height k, which is called as a full tree, we will have:
+	 - In a binary tree, if we pack the maximum number of nodes into a binary tree of height k, which is called as a
+	 full tree, we will have:
 		1+2+4+....+2^k = 2^(k+1) - 1 nodes.
 
 	 - The minimum height of a bonary tree with n nodes is O(log n)
 
-	- Binary tree traversals : a traversal of a tree is the act of visiting every node in the tree once. There are three traversal orders:
+	- Binary tree traversals : a traversal of a tree is the act of visiting every node in the tree once. There are three
+	traversal orders:
 		 - Pre-order : visit the root first and then the left and right sub-trees recursively
 		 - In-order : visit the left sub-tree, the root, and then the right sub-tree
  		 - Post-order : visit the left and right sub-trees first and the root last
@@ -402,7 +415,8 @@ Analysis of recursive algorithms
 				- Remove the rightmost node in the left subtree
 
 	 - AVL trees:
-		 - It is  self balancing Binary Search Tree where the difference between heights of the left and right subtrees cannot be more than one for all nodes.	
+		 - It is  self balancing Binary Search Tree where the difference between heights of the left and right
+		 subtrees cannot be more than one for all nodes.	
 		 - A recursive definition : left and right subtrees are height balanced
 
 
@@ -423,7 +437,8 @@ Analysis of recursive algorithms
 
 	
 	- ROTATIONS:
-		- Two basic operations are used to perform some re-balancing without violating the BST property : (keys(left) < key(root) < keys(right)) :
+		- Two basic operations are used to perform some re-balancing without violating the BST property :
+		(keys(left) < key(root) < keys(right)) :
 			 - Left rotation 
 		 	 - Right rotation
 
@@ -437,7 +452,9 @@ Analysis of recursive algorithms
 
  -> INHERITANCE:
 		
-	 - Inheritance in c++ takes place between classes. In an inheritance (is-a) relationship, the class being inherited from is called the parent class and the class doing the inheriting is called the child class, derived class or the subclass.
+	 - Inheritance in c++ takes place between classes. In an inheritance (is-a) relationship, the class being inherited
+	 from is called the parent class and the class doing the inheriting is called the child class, derived class or the
+	 subclass.
 	 - Anything defines in the superclass can be used by the child class
 	 - Behaviours can also be inherited, leading to a very powerful code reuse.
 
@@ -461,13 +478,20 @@ Analysis of recursive algorithms
 
 	 - The word polymorphism means having many forms.
 	 - Polymorphism occurs when there is a hirearchy of classes and they are related by inheritance.
-	 - C++ polymorphism means that a call to a member function will cause a different function to be executed depending on the type of the object that invokes the function.
+	 - C++ polymorphism means that a call to a member function will cause a different function to be executed depending
+	 on the type of the object that invokes the function.
 
-	 - Virtual function : its a function in a base class that is declared using the keyword 'virtual'. This defined in a base class with another version in a derived class, signals to the compiler that we do not want static linkage for this function. Using this we want to call the function at any given point in the program based on the kind of object for which it is called. This sort of operation is referred to as dynamic linkage or late binding.
+	 - Virtual function : its a function in a base class that is declared using the keyword 'virtual'. This defined in a
+	 base class with another version in a derived class, signals to the compiler that we do not want static linkage for
+	 this function. Using this we want to call the function at any given point in the program based on the kind of
+	 object for which it is called. This sort of operation is referred to as dynamic linkage or late binding.
 
-	 - Pure virtual function : In order to include a virtual function in a base class  so that it may be redefined in a derived class to suit the objects of that class, but do not have a good definition for the function, we simply write it as equivalent to 0 :
+	 - Pure virtual function : In order to include a virtual function in a base class  so that it may be redefined in a
+	 derived class to suit the objects of that class, but do not have a good definition for the function, we simply
+	 write it as equivalent to 0 :
 			=> virtual typename function() = 0;
-	 - The =0 tells the compiler that the function has no body, and the above function will be called 'pure virtual function'.
+	 - The =0 tells the compiler that the function has no body, and the above function will be called 'pure virtual
+	 function'.
 
 	 
 	 - Abstract classes : defines an abstract type which cannot be instantiated, but can be used as a base class
@@ -478,7 +502,8 @@ Analysis of recursive algorithms
 
 
 	 - Inheritance : Constructors
-		 - Usually a subclass calls the default constructor (i.e. no parameters) of the super class before executing its own constructor.
+		 - Usually a subclass calls the default constructor (i.e. no parameters) of the super class before executing
+		 its own constructor.
 		 - We can force the subclass to call a different constructor using this form in the definition.
 
 
@@ -499,7 +524,8 @@ Analysis of recursive algorithms
 	 - Connectivity:
 		 - A graph is connected if there is a path between every pair of nodes
 		 - A graph is strongly connected if there is a path between every pair of nodes
-		 - A graph is weakly connected if you can make a path between every pair of nodes by removing the direction of the edge
+		 - A graph is weakly connected if you can make a path between every pair of nodes by removing the direction
+		 of the edge
 
 	 - Weighted and Unweighted graphs: graphs with additional data for every edge.
 
@@ -510,12 +536,15 @@ Analysis of recursive algorithms
 		 - Adjacency list
 
 	 - Adjacency matrix:
-		 - Searching through all the arrays can be expensive, so, a common approach is to use a matrix to hold all edges.
+		 - Searching through all the arrays can be expensive, so, a common approach is to use a matrix to hold all
+		 edges.
 		 -  Each column and row is for a node : n x n
 	
 	 - CAVEAT: 
-		 - Doesn't work with weighted graphs. Edges can have zero weight, so there's no difference between a zero weight and an edge that's not there.
-		 - On sparse graphs, a matrix can waste a lot of space with all the zeros. Using an array of linked lists is an alternative (Adjacency list).
+		 - Doesn't work with weighted graphs. Edges can have zero weight, so there's no difference between a zero
+		 weight and an edge that's not there.
+		 - On sparse graphs, a matrix can waste a lot of space with all the zeros. Using an array of linked lists is
+		 an alternative (Adjacency list).
 
 	 -> DFS Pseudocode (Recursive):
 		function DFS(Node node):
