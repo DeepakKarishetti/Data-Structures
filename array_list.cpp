@@ -90,7 +90,7 @@ void array_list::insert(int index, int val)
 	
 }
 
-// array list operation: erase
+// array list operation: delete 
 void array_list::erase(int index)
 {
 	for (int j = index; j < _size - 1; j++)

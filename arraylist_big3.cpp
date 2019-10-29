@@ -25,7 +25,7 @@ class array_list
 		array_list& operator=(const array_list& lst); // copy assignment operator
 };
 
-array__list::array_list()
+array_list::array_list()
 {
 	_capacity = 0;
 	_size = 0;
